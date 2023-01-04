@@ -1,0 +1,12 @@
+<!doctype html>
+<title>Hello from Flask</title>
+  <h1>Hello !</h1>
+   <form action="\" method='post' style="">
+        --按钮--<br><br>
+        <input type=file name=file>
+        <br><br><input type=submit value='咖啡厅' name="按钮一">
+        <br><br><input type=submit value='驻马店' name="按钮二">
+        <br><br>当前状态<br><br>
+        {{ message }}
+    </form>
+  <h2>{{get_flashed_messages()[0]}}</h2>
