@@ -1,11 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>喜爱你是</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <title>输入提示后查询</title>
+    <link rel="stylesheet" href="https://cache.amap.com/lbs/static/main1119.css"/>
+    <script type="text/javascript">
+         window._AMapSecurityConfig = {
+             securityJsCode:'7b752ad33effbde7434b12705bb80c0a',
+         }
+         </script>
+    <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.15&key=70f228a06b3aba233e0eb8d54b31526e&plugin=AMap.Autocomplete,AMap.PlaceSearch"></script>
+    <script type="text/javascript" src="https://cache.amap.com/lbs/static/addToolbar.js"></script>
 </head>
 <body>
-驻马店here
-{{location}}
+<div id="container"></div>
+<div id="myPageTop">
+    <table>
+        <tr>
+            <td>
+                <label>请输入关键字：</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form action="\poi" method="post">
+                <input id="tipinput" name="test"/>
+               <br><br><input type=submit value='咖啡厅' name="按钮一">查看
+                    </form>
+            </td>
+        </tr>
+    </table>
+</div>
+<script type="text/javascript">
+
+    //输入提示
+    var autoOptions = {
+        input: "tipinput"
+    };
+    var auto = new AMap.Autocomplete(autoOptions);
+    var placeSearch = new AMap.PlaceSearch({
+        map: map
+    });  //构造地点查询类
+    AMap.event.addListener(auto, "select", select);//注册监听，当选中某条记录时会触发
+    function select(e) {
+        placeSearch.setCity(e.poi.adcode);
+        placeSearch.search(e.poi.name);  //关键字查询查询
+    }
+
+</script>
 </body>
 </html>
