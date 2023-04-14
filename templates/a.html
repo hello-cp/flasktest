@@ -1,0 +1,640 @@
+{% extends "father.html" %}
+
+{% block title %}
+
+<head>
+    <script type="text/javascript" async="" charset="utf-8"
+            src="https://w.cnzz.com/c.php?id=30065558&amp;async=1"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>洛阳热门路线推荐 - 捷诚旅行</title>
+    <meta name="description"
+          content="中国景点介绍中国旅游景点攻略信息,中国景点介绍包括景点地址,景点门票,景点点评等,推荐中国最值得去的热门旅游景点,寻找更多中国旅游景点信息,尽在捷诚中国景点攻略">
+    <meta name="keywords" content="中国景点,中国景点介绍,中国景点推荐">
+    <meta name="renderer" content="webkit">
+<link rel="shortcut icon" href="https://pic.imgdb.cn/item/642ad0faa682492fcc1f723e.jpg" type="image/x-icon">
+    <script src="https://hm.bai8288b2ed37e5bc9b4c9f7008798d2de0du.com/hm.js?"></script>
+    <script type="text/javascript">
+window.Env = {"isCnmain":true,"country_mddid":21536,"WWW_HOST":"www.mafengwo.cn","IMG_HOST":"images.mafengwo.net","W_HTTP":"https:\/\/w.mafengwo.cn","P_HOST":"passport.mafengwo.cn","P_HTTP":"https:\/\/passport.mafengwo.cn","PAGELET_HTTP":"https:\/\/pagelet.mafengwo.cn","JS_HOST":"js.mafengwo.net","TONGJI_HOST":"tongji.mafengwo.cn","UID":0,"CSTK":"fe761b5ceac40c0c4089de3adaad4f22_b14368703574666c03781f1764185343","GOOGLE_MAP_KEY":"AIzaSyD-Su0x_rPy1xehlMBcMyTqWkU49Bk53nQ"};
+
+
+    </script>
+
+<!--    <link href="https://css.mafengwo.net/css/cv/css+base:css+jquery.suggest:css+plugins:css+plugins+jquery.jgrowl:css+other+popup:css+mfw-header.2015^YlVS^1642607674.css"-->
+<!--          rel="stylesheet" type="text/css">-->
+
+    <link href="https://css.mafengwo.net/css/cv/css+mdd+place-v2:css+mdd+map-mark.v2:css+mdd+scenic-list^ZlM^1588929882.css"
+          rel="stylesheet" >
+
+
+    <script language="javascript"
+            src="https://js.mafengwo.net/js/cv/js+jquery-1.8.1.min:js+global+json2:js+M+Module:js+M+M:miniapp+js+sdk:js+M+Log:js+m.statistics:js+advert+inspector:js+jumpMonitor^Ylda^1650612185.js"
+            type="text/javascript" crossorigin="anonymous"></script>
+
+    <script async=""
+            src="https://js.mafengwo.net/js/cv/js+Dropdown:js+pageletcommon+pageHeadUserInfoWWWNormal:js+jquery.tmpl:js+M+module+InputListener:js+M+module+SuggestionXHR:js+M+module+DropList:js+M+module+Suggestion:js+M+module+MesSearchEvent:js+M+module+Cookie:js+SiteSearch:js+AHeader:js+M+module+PageAdmin:js+M+module+Storage:js+M+module+ResourceKeeper:js+jquery.jgrowl.min:js+AMessage:js+M+module+dialog+Layer:js+M+module+dialog+DialogBase:js+M+module+dialog+Dialog:js+M+module+dialog+alert:js+M+module+FrequencyVerifyControl:js+M+module+FrequencySystemVerify:js+ALogin:js+M+module+ScrollObserver:js+M+module+QRCode:js+AToolbar:js+ACnzzGaLog:js+ARecruit:js+ALazyLoad^ZVdT^1663136456.js"
+            crossorigin="anonymous"></script>
+    <script async="" src="https://js.mafengwo.net/js/BrowserState.js?1542357403" crossorigin="anonymous"></script>
+</head>
+{% endblock %}
+
+{% block body %}
+<body style="position: relative;">
+
+<div class="b_city_head">
+    <div style="width:1200px; height: 20px; margin:0 auto">
+        <div class="city_name clrfix" style="margin-top: 5px; margin-bottom: 5px;"><span class="cn_name"><p style="font-size: 50px; font-family: 华文琥珀">洛阳</p></span><span class="en_name"></span></div>
+        <p class="desc" style="font-size: 20px; ">千年帝都，牡丹花城。十三朝古都——洛阳，是中国历史上建都最早、朝代最多、历时最长的城市。</p></div>
+    </div>
+
+
+
+<div style="position: relative;align-items: center; display: flex; justify-content: center; margin: 100px auto;">
+    <div class="arrow arrow-left" onclick="prev()"></div>
+    <div class="arrow arrow-right" onclick="next()"></div>
+    <img id="demo1"
+         src="https://tr-osdcp.qunarzz.com/tr-osd-tr-mapi/img/12d8414e1dfc15664e841790e5d7d003.jpg_r_1024x683x95_fec48126.jpg"
+        width="1200" height="500">
+    <ul class="indexes">
+        <li class=""></li>
+        <li class="active"></li>
+        <li class=""></li>
+        <li class=""></li>
+    </ul>
+</div>
+
+<script>
+			function next() {
+				index++
+				if(index === 4) index = 0
+				clearInterval(timer)
+				setStyle()
+				run()
+			}
+			function prev() {
+				index--
+				if(index === -1) index = 3
+				clearInterval(timer)
+				setStyle()
+				run()
+			}
+			//下面是图片的地址链接
+			let arr = [
+				"https://tr-osdcp.qunarzz.com/tr-osd-tr-mapi/img/12d8414e1dfc15664e841790e5d7d003.jpg_r_1024x683x95_fec48126.jpg",
+				"https://youimg1.c-ctrip.com/target/0100j120006jgb1k1C109_D_10000_1200.jpg?proc=autoorient",
+				"https://img1.qunarzz.com/travel/d3/1507/3d/147832ad5af241.jpg_r_1024x683x95_4161a612.jpg",
+				"https://ts1.cn.mm.bing.net/th/id/R-C.630f8122d6efa75d9c58fa0a3ca0ec1e?rik=BVRFXc%2bmO25QNg&riu=http%3a%2f%2fimage.xitek.com%2fphoto%2f201607%2f83637%2f8363753%2f8363753_1469937951_64215600.jpg&ehk=4I6rVnWC03YB5MlIFozhuR2mMEngqJDga6GMl34Y1X4%3d&risl=&pid=ImgRaw&r=0"
+			]
+			var demo1 = document.getElementById('demo1')
+			let indexes = document.getElementsByClassName('indexes')[0].children
+			let timer = 60
+			for (let i = 0; i < indexes.length; i++) {
+				indexes[i].onmouseenter = function () {
+					index = i
+					clearInterval(timer)
+					setStyle()
+				}
+				indexes[i].onmouseleave = function () {
+					run()
+				}
+			}
+			var index = 0
+			 function run() {
+				 timer = setInterval(() => {
+				index++
+				if(index === 4) index = 0
+				setStyle()
+			}, 1000);
+			 }
+			 function setStyle() {
+				 demo1.src = arr[index]
+				 let active = document.getElementsByClassName('active')[0]
+				 active.classList.remove('active')
+				 indexes[index].classList.add("active")
+			 }
+			 run()
+</script>
+
+<script defer="" async="" type="text/javascript"
+        src="//static.mafengwo.net/wza/aria.js?appid=231e66a83e25807b37fadae6d233d5af" crossorigin="anonymous"
+        charset="utf-8"></script>
+
+
+<div id="container" data-cs-t="景点列表页">
+
+    <div class="row row-top5" data-cs-p="必游景点">
+        <div class="wrapper">
+            <h2 class="title">热门路线</h2>
+            <div class="item clearfix">
+                <div class="info">
+                    <div class="middle">
+                        <h3>
+                            <span class="num" >1</span>
+                            <a href="/classic/1" target="_blank" >洛阳全景4日线路
+                            </a><a href="/classic/1"  >
+                        </a>
+                        </h3>
+                        <p>路线整体上是以游古城为主，挑选一天来赏花，假期带着家人来洛阳，享受人间天伦之乐。本条路线不仅适合家庭游，好友同游也可以进行参照。</p>
+                    </div>
+                </div>
+                <div class="pic">
+                    <a href="/classic/1" target="_blank" title="洛阳全景4日线路">
+                        <div class="large">
+                            <img src="https://img1.qunarzz.com/travel/d3/1803/b0/58a9ed19d25391b5.jpg_r_1024x683x95_4a4d9306.jpg"
+                                 width="380" height="270">
+                        </div>
+                        <div>
+                            <img src="https://img1.qunarzz.com/travel/d7/1611/24/9a3aa612702f92b5.jpg_r_1024x683x95_47098a47.jpg"
+                                 width="185" height="130">
+                        </div>
+                        <div>
+                            <img src="https://img1.qunarzz.com/travel/d8/1610/da/938070dae433eb5.jpg_r_1024x683x95_30df14f1.jpg"
+                                 width="185" height="130">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="item clearfix">
+                <div class="info">
+                    <div class="middle">
+                        <h3>
+                            <span class="num">2</span>
+                            <a href="/classic/2" target="_blank" title="洛阳旅发委推荐4日线路">洛阳旅发委推荐4日线路
+                            </a><a href="/classic/2" target="_blank" title="洛阳旅发委推荐4日线路">
+                        </a>
+                        </h3>
+                        <p>洛阳，洛水之阳（古时人称山南水北为阳）。它的风景犹如它的名字一般让人心神向往。它是中华文明史上最为古老的帝都王城，是中华文化的读本。文明首萌于此，道、儒渊源于此。圣贤云集，人文荟萃。在这里，你总能感受到一种时光沉淀下来的沉静与安详。本次路线，将用两天的时间，带你梦回千年古都洛阳。</p>
+                    </div>
+                </div>
+                <div class="pic">
+                    <a href="/classic/2" target="_blank" title="洛阳旅发委推荐4日线路">
+                        <div class="large">
+                            <img src="https://tr-osdcp.qunarzz.com/tr-osd-tr-mapi/img/12d8414e1dfc15664e841790e5d7d003.jpg_r_1024x683x95_fec48126.jpg"
+                                 width="380" height="270">
+                        </div>
+                        <div>
+                            <img src="https://img1.qunarzz.com/travel/d5/1611/74/084f7cdfd26624b5.jpg_r_1024x683x95_d47cfac2.jpg"
+                                 width="185" height="130">
+                        </div>
+                        <div>
+                            <img src="https://tr-osdcp.qunarzz.com/tr-osd-tr-mapi/img/83bba5b83ab1e5813cda67a6e17a582c.jpg_r_1024x683x95_dc1d2316.jpg"
+                                 width="185" height="130">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="item clearfix">
+                <div class="info">
+                    <div class="middle">
+                        <h3>
+                            <span class="num">3</span>
+                            <a href="/classic/3" target="_blank" title="洛阳景点文化2日线路">洛阳景点文化2日线路
+                            </a><a href="/classic/3" target="_blank" title="洛阳景点文化2日线路">
+                        </a>
+                        </h3>
+                        <p>
+                            洛阳，洛水之阳（古时人称山南水北为阳）。它的风景犹如它的名字一般让人心神向往。它是中华文明史上最为古老的帝都王城，是中华文化的读本。文明首萌于此，道、儒渊源于此。圣贤云集，人文荟萃。在这里，你总能感受到一种时光沉淀下来的沉静与安详。本次路线，将用两天的时间，带你梦回千年古都洛阳。</p>
+                    </div>
+                </div>
+                <div class="pic">
+                    <a href="/classic/3" target="_blank" title="洛阳景点文化2日线路">
+                        <div class="large">
+                            <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2F2e1dfe77-1801-44b7-be94-6ca845933a69%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1683210421&t=9c6f45a5ca905bb9893c799fd53da656"
+                                 width="380" height="270">
+                        </div>
+                        <div>
+                            <img src="https://img1.qunarzz.com/piao/fusion/2110/9d/2410da0cd72d4a02.jpg_r_1024x683x95_eab857a3.jpg"
+                                 width="185" height="130">
+                        </div>
+                        <div>
+                            <img src="https://tr-osdcp.qunarzz.com/tr-osd-tr-space/img/fecb72ec8aa2af5a782435289617bc44.jpg_r_1024x683x95_3b43c049.jpg"
+                                 width="185" height="130">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="item clearfix">
+                <div class="info">
+                    <div class="middle">
+                        <h3>
+                            <span class="num">4</span>
+                            <a href="/classic/4" target="_blank" title="洛阳周边赏秋2日线路">洛阳周边赏秋2日线路
+                            </a><a href="/classic/4" target="_blank" title="洛阳周边赏秋2日线路">
+
+                        </a>
+                        </h3>
+                        <p>小假期或周末不想远途游，那就考虑周边风景名胜吧！周边有山有水，风景四季各异，不失为休闲散心的好去处。</p>
+                    </div>
+                </div>
+                <div class="pic">
+                    <a href="/classic/4" target="_blank" title="洛阳周边赏秋2日线路">
+                        <div class="large">
+                            <img src="https://img1.qunarzz.com/travel/d7/1507/64/9c3230f99b6070.jpg_r_1024x683x95_afd1ab0c.jpg"
+                                 width="380" height="270">
+                        </div>
+                        <div>
+                            <img src="https://img1.qunarzz.com/travel/d0/1604/47/7779a15fb16afaf7.jpg_r_1024x683x95_e897c1cd.jpg"
+                                 width="185" height="130">
+                        </div>
+                        <div>
+                            <img src="http://23561696.s21i.faiusr.com/2/ABUIABACGAAgwqaVoQYo9tnTtQUw7Qc42wg!300x300.jpg.webp"
+                                 width="185" height="130">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="item clearfix">
+                <div class="info">
+                    <div class="middle">
+                        <h3>
+                            <span class="num">5</span>
+                            <a href="/classic/5" target="_blank" title="洛阳经典3日线路">洛阳经典3日线路
+                            </a><a href="/classic/5" target="_blank" title="洛阳经典3日线路">
+                        </a>
+                        </h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="pic">
+                    <a href="/classic/5" target="_blank" title="洛阳经典3日线路">
+                        <div class="large">
+                            <img src="https://p1-q.mafengwo.net/s13/M00/B0/3F/wKgEaVyfdMOAK8WSABYzNHKZXRQ40.jpeg?imageMogr2%2Fthumbnail%2F%21380x270r%2Fgravity%2FCenter%2Fcrop%2F%21380x270%2Fquality%2F100"
+                                 width="380" height="270">
+                        </div>
+                        <div>
+                            <img src="https://img1.qunarzz.com/travel/d6/1510/3e/fc3fa9aaf8045bf7.jpg_r_1024x683x95_d066fa7a.jpg"
+                                 width="185" height="130">
+                        </div>
+                        <div>
+                            <img src="https://tr-osdcp.qunarzz.com/tr-osd-tr-mapi/img/7a42a4c004c47f5d239b4de5925a385e.jpg_r_1024x683x95_3b8f0f6d.jpg"
+                                 width="185" height="130">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="item clearfix">
+                <div class="info">
+                    <div class="middle">
+                        <h3>
+                            <span class="num">6</span>
+                            <a href="/classic/6" target="_blank" title="洛阳孟津人文1日线路">洛阳孟津人文1日线路
+                            </a><a href="/classic/6" target="_blank" title="洛阳孟津人文1日线路">
+                        </a>
+                        </h3>
+                        <p>
+                            这也是一条探索历史文化遗迹的路线，穿梭景点间，重走历史路，时间充足不妨作为备选线路，值得一去。</p>
+                    </div>
+                </div>
+                <div class="pic">
+                    <a href="/classic/6" target="_blank" title="洛阳孟津人文1日线路">
+                        <div class="large">
+                            <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fss2.meipian.me%2Fusers%2F1075999%2Fc291608a7b139e0c4ecbebd63e563d0d.jpg%3Fmeipian-raw%2Fbucket%2Fivwen%2Fkey%2FdXNlcnMvMTA3NTk5OS9jMjkxNjA4YTdiMTM5ZTBjNGVjYmViZDYzZTU2M2QwZC5qcGc%3D%2Fsign%2F4581324e943275e133a88a25e799512f.jpg&refer=http%3A%2F%2Fss2.meipian.me&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1683212209&t=91faa73721252adb45cb23971f9ca217"
+                                 width="380" height="270">
+                        </div>
+                        <div>
+                            <img src="https://img1.qunarzz.com/travel/d9/1603/5e/f87eaccb32ed9af7.jpg_r_1024x683x95_261c7b82.jpg"
+                                 width="185" height="130">
+                        </div>
+                        <div>
+                            <img src="https://flight-feed.qunarzz.com/as3/180/image/poi_vishnu/ea00c593-5ad5-4271-88f6-b45df9bd255f.jpg"
+                                 width="185" height="130">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="item clearfix">
+                <div class="info">
+                    <div class="middle">
+                        <h3>
+                            <span class="num">7</span>
+                            <a href="/classic/7" target="_blank" title="洛阳古韵气息2日线路">洛阳古韵气息2日线路
+                            </a><a href="/classic/7" target="_blank" title="洛阳古韵气息2日线路">
+
+                        </a>
+                        </h3>
+                        <p>
+                            游洛阳二日，内容丰富，白天看景点，晚上逛街吃小吃，体验当地老城的生活。路程安排宽松，边看边玩，走遍洛阳城。</p>
+                    </div>
+                </div>
+                <div class="pic">
+                    <a href="/classic/7" target="_blank" title="洛阳古韵气息2日线路">
+                        <div class="large">
+                            <img src="https://tr-osdcp.qunarzz.com/tr-osd-tr-space/img/1da91a2781ef68a5ab773b8a3cfbfbf1.jpg_r_1024x683x95_e6d7dd80.jpg"
+                                 width="380" height="270">
+                        </div>
+                        <div>
+                            <img src="https://mp-commentcp.qunarzz.com/mp_comment_mp_comment/1547926166190100u10000000p3yyt74D8_D_640_10000.jpg_r_1024x683x95_c258762b.jpg"
+                                 width="185" height="130">
+                        </div>
+                        <div>
+                            <img src="https://img1.qunarzz.com/piao/fusion/2107/51/03efaa69096f6702.jpg_r_1024x683x95_1f5f0813.jpg"
+                                 width="185" height="130">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="item clearfix">
+                <div class="info">
+                    <div class="middle">
+                        <h3>
+                            <span class="num">8</span>
+                            <a href="/classic/8" target="_blank" title="洛阳自然之旅2日线路" >洛阳自然之旅2日线路
+                            </a><a href="/classic/8" target="_blank" title="洛阳自然之旅2日线路">
+
+                        </a>
+                        </h3>
+                        <p>
+                            云海、佛光、日出、雾凇，只需来到洛阳的后花园——栾川，你便可以尽收眼底。栾川的风景美得让人心醉，寄情于栾川的山水，如同徜徉在世外桃源，我们可以用两天的时间去欣赏栾川瑰丽的自然风光。</p>
+                    </div>
+                </div>
+                <div class="pic">
+                    <a href="/classic/8" target="_blank" title="洛阳自然之旅2日线路">
+                        <div class="large">
+                            <img src="https://img1.qunarzz.com/travel/d4/1507/2a/be19242dfd515a.jpg_r_1024x683x95_f924b99c.jpg"
+                                 width="380" height="270">
+                        </div>
+                        <div>
+                            <img src="https://img1.qunarzz.com/travel/poi/201211/19/a7f3f33aa14397a1ddb12cfb.jpg_r_1024x683x95_3a389324.jpg"
+                                 width="185" height="130">
+                        </div>
+                        <div>
+                            <img src="https://mp-commentcp.qunarzz.com/mp_comment_mp_comment/1550257810981100m11000000r63oc861F_D_640_10000.jpg_r_1024x683x95_72a7357b.jpg"
+                                 width="185" height="130">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="item clearfix">
+                <div class="info">
+                    <div class="middle">
+                        <h3>
+                            <span class="num">9</span>
+                            <a href="/classic/9" target="_blank" title="洛阳博物馆文化之旅2日线路" >洛阳博物馆文化之旅2日线路
+                            </a><a href="/classic/9" target="_blank" title="洛阳博物馆文化之旅2日线路">
+
+                        </a>
+                        </h3>
+                        <p>
+                            “欲问古今兴废事，请君只看洛阳城。”来到洛阳就是要了解五千年中华历史的缩影，而要领略河洛文化5000年的发展历程和洛阳城昔日的辉煌，通过观看文物无疑是最简洁的方式。我们将用两天的时间，玩遍洛阳的特色博物馆，感受这座城市的历史与积淀。</p>
+                    </div>
+                </div>
+                <div class="pic">
+                    <a href="/classic/9" target="_blank" title="洛阳博物馆文化之旅2日线路">
+                        <div class="large">
+                            <img src="https://img2.baidu.com/it/u=181828966,1096962555&fm=253&fmt=auto&app=120&f=JPEG?w=888&h=500"
+                                 width="380" height="270">
+                        </div>
+                        <div>
+                            <img src="https://tr-osdcp.qunarzz.com/tr-osd-tr-space/img/4b2d14644937e51b60f9176ff42c676c.jpg_r_1024x683x95_f96e738e.jpg"
+                                 width="185" height="130">
+                        </div>
+                        <div>
+                            <img src="https://img2.baidu.com/it/u=3242677164,2219525740&fm=253&fmt=auto&app=138&f=JPEG?w=664&h=500"
+                                 width="185" height="130">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+            (function ($) {
+                var tagId,
+                        page = 1;
+                $('.nav li').click(function () {
+                    var $this = $(this);
+                    if(!$this.hasClass('on')){
+                        tagId = $this.data('tagid');
+                        page = 1;
+                        getPage($this);
+                    }
+                }).eq(0).click();
+                function getPage($element) {
+                    $.ajax({
+                        url: '/ajax/router.php',
+                        dataType: "json",
+                        data: {
+                            'sAct': 'KMdd_StructWebAjax|GetPoisByTag',
+                            'iMddid': 21536,
+                            'iTagId': tagId || 0,
+                            'iPage': page
+                        },
+                        type: 'post',
+                        success: function (ret) {
+                            if (ret.succ) {
+                                $element && $element.addClass('on').siblings().removeClass('on');
+                                $('.row-allScenic .scenic-list').html(ret.data.list);
+                                $('.row-allScenic ._j_tn_pagination').html(ret.data.page).find('a[data-page]').click(function () {
+                                    page = $(this).data('page');
+                                    getPage();
+                                });
+                            }
+                        }
+                    });
+                }
+            })(jQuery);
+
+    </script>
+
+
+</div>
+<link href="https://css.mafengwo.net/css/mfw-footer.css?1558532347" rel="stylesheet" type="text/css">
+
+
+<style>
+    #banner-con-gloable{
+        display: block;
+        position: fixed;
+        bottom: 0;
+        left: -100%;
+        z-index: 110;
+        width:100%;
+        height: 179px;
+        overflow-x: hidden;
+    }
+    #banner-con-gloable .banner-btn-con{
+        width: 100%;
+        height:162px;
+        background: #0C1500;
+        opacity: .8;
+        position: absolute;
+        bottom: 0;
+    }
+    #banner-con-gloable .banner-btn-con .close-btn{
+        position: absolute;
+        right: 35px;
+        top:24px;
+        z-index: 120;
+        height: 24px;
+        width: 24px;
+        cursor:pointer;
+    }
+    #banner-con-gloable .banner-image-con{
+        position: absolute;
+        right: 50%;
+        bottom: 0;
+        width: 1000px;
+        margin-right: -500px;
+    }
+    #float-pannel-gloable{
+        padding-left: 0;
+        padding-bottom: 30px;
+        display: block;
+        position: fixed;
+        bottom: 0;
+        z-index: 110;
+        left: -230px;
+    }
+    #float-pannel-gloable .float-btn{
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 100;
+    }
+    #closed{
+        height:24px;
+        width:24px;
+        vertical-algin:top;
+        border:none;
+        cursor:pointer;
+    }
+
+</style>
+
+
+<script>
+    $(function () {
+        var floatBottomBoxPannelDom = $("#float-pannel-gloable");
+        var floatBottomBoxBannerConDom = $("#banner-con-gloable");
+        // 过滤的URL规则，匹配不展示的页面
+        // var flag = location.href.match(/www\.(mafengwo|\S+)\.(cn|ab)\/(hotel|wenda)/g) ||
+        //     location.href.match(/passport\.(mafengwo|\S+)\.(cn|ab)\/setting/g) ||
+        //     location.href.match(/gonglve\/ziyouxing\/(modify|home|comment)/g) ||
+        //     location.href.match(/(note|ginfo)\/(create|create_index)\.php/g);
+        // if(!flag){
+        //     // 如果当前页面URL不在过滤列表之内，判断是否展示
+        // }
+
+        var bottomAdStatus = getCookie('bottom_ad_status');
+        if (bottomAdStatus === '0') {
+            closeBanner();
+        } else {
+            showBanner();
+        }
+
+        function scrollFn() {
+            window.removeEventListener("scroll", scrollFn);
+            closeBanner(true);
+        }
+
+        // 浮标非关闭按钮部分点击
+        $('#float-pannel-gloable .float-image').click(function (){
+            // 浮标点击上报
+            reportFloatClick();
+            showBanner(true);
+        });
+
+        // banner关闭按钮点击
+        $('#banner-con-gloable .close-btn').click(function () {
+            closeBanner(true);
+        });
+
+        // 浮标关闭按钮点击
+        // $("#float-pannel-gloable .float-btn").click(function () {
+        //     floatBottomBoxBannerConDom.animate({ left:-window.innerWidth,},1000,'swing');
+        //     setTimeout(function () {
+        //         floatBottomBoxPannelDom.animate({ left:-230,},800,'swing');
+        //         floatBottomBoxBannerConDom.hide();
+        //     }, 1000);
+        // });
+
+        // value 1为显示，0为收起
+        function setCookie(name, value) {
+            var time = 24 * 60 * 60 * 1000;
+            var exp = new Date().setHours(0, 0, 0, 0);
+            var expires = new Date(exp + time);
+            document.cookie=name+'=' + escape(value) + ';expires='+expires.toGMTString()+';path=/';
+        }
+
+        function getCookie(name) {
+            var arr = null;
+            var reg = new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+            var arr=document.cookie.match(reg);
+            if(arr) {
+                return unescape(arr[2]);
+            } else {
+                return null;
+            }
+        }
+
+        function showBanner(useAnimation) {
+            // 显示banner
+            floatBottomBoxPannelDom.animate({ left:-230,}, useAnimation ? 500 : 0,'swing');
+            setTimeout(function () {
+                floatBottomBoxBannerConDom.show();
+                floatBottomBoxBannerConDom.css('width','100%');
+                floatBottomBoxBannerConDom.animate({ left:0,}, useAnimation ? 1000 : 0,'swing');
+                window.addEventListener("scroll", scrollFn);
+            }, 800);
+            setCookie('bottom_ad_status', 1);
+        }
+        function closeBanner(useAnimation) {
+            floatBottomBoxBannerConDom.animate({ left:-window.innerWidth,}, useAnimation ? 1000 : 0,'swing');
+            setTimeout(function () {
+                floatBottomBoxPannelDom.animate({ left:0,}, useAnimation ? 800 : 0,'swing');
+                // 浮标曝光
+                reportFloatExposure();
+                floatBottomBoxBannerConDom.hide();
+            }, 1000);
+            setCookie('bottom_ad_status', 0);
+        }
+
+        // banner曝光事件上报
+        function reportBannerExposure() {
+            if (window.mfwPageEvent) {
+                // banner曝光
+                mfwPageEvent('sales', 'show_index_index', {
+                    pos_id: 'index.index.floatbanner.x',
+                    module_name: '浮标大广告位',
+                    item_source: 'float',
+                    item_uri: window.location.href,
+                })
+            }
+        }
+
+        // 浮标点击事件上报
+        function reportFloatClick() {
+            if (window.mfwPageEvent) {
+                // 浮标点击事件上报
+                mfwPageEvent('sales', 'click_index_index', {
+                    pos_id: 'index.index.floaticon.x',
+                    module_name: '浮标广告位',
+                    item_source: 'float',
+                    item_uri: window.location.href,
+                })
+            }
+        }
+
+        // 浮标曝光事件上报
+        function reportFloatExposure() {
+            if (window.mfwPageEvent) {
+                mfwPageEvent('sales', 'show_index_index', {
+                    pos_id: 'index.index.floaticon.x',
+                    module_name: '浮标广告位',
+                    item_source: 'float',
+                    item_uri: window.location.href,
+                })
+            }
+        }
+    });
+
+</script>
+
+
+
+
+</body>
+{% endblock %}
