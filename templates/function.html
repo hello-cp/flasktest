@@ -2,10 +2,616 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>展示功能页面</title>
+    <title>捷诚旅行-专属的个性化旅程</title>
+    <link rel="shortcut icon" href="https://pic.imgdb.cn/item/642ad0faa682492fcc1f723e.jpg" type="image/x-icon">
+<!--    <link rel="stylesheet" href="\static\CSS\function.css">-->
+    <link rel="stylesheet" href="\static\CSS\swiper.css">
+    <style type="text/css">
+		body {
+            background: white;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+            overflow:scroll;
+        }
+        #banner{
+        	height:500px;
+        }
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+        .swiper-slide {
+            text-align: left;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+        *{
+        margin:0;
+        padding:0;
+        }
+        li{list-style:none;}
+        a{text-decoration:none;}
+	</style>
+<!--    <script src="\static\JS\javaS.js"></script>-->
     <!-- 表单提交到 action='/home'-->
 </head>
 <body>
-haode
+    <!--导航栏-->
+    <div id="daohang" style="width:100%;height:70px;background:white;clear:both;position:fixed;top:0;z-index:999;border-bottom:1.5px solid #eeeeee;box-shadow: 0 1.5px 1.5px 0 rgba(223,223,223,1)">
+        <div class="container" style="width:1280px;height:100%;margin:auto;clear:both">
+            <div class="left" style="float:left;width:20%;height:80%;margin:8px 0px 5px 10px;">
+                <div style="float:left"><img src="https://pic.imgdb.cn/item/643237b90d2dde5777defde7.jpg" alt="logo" style="width:55px; height:55px;margin-right:5px;"></div>
+                <div style="float:left;width:150px;height:55px;margin-top:6px;">
+                    <div><span style="font-weight: bold;font-size:25px;font-family:cursive;color:#00925f;letter-spacing:2px;">捷诚旅行</span></div>
+                    <div><span style="font-size:15px;font-style:Monaco;color:#858383">Jiecheng Travel</span></div>
+                </div>
+            </div>
+            <div class="right" style="width:60%;height:100%;float:left">
+                  <ul style="flex-direction:column;">
+                      <li style="background:#66cc99;"><a href="/home" class="first" style="color:white;">首页</a></li>
+                      <li><a href="/plan" >个性化规划</a></li>
+                      <li ><a href="/schedule">日程规划</a></li>
+                      <li><a href="/blind">旅游盲盒</a></li>
+                      <li><a href="/poi">景点一览</a></li>
+                      <li><a href="/classic">热门路线</a></li>
+                      <li><a href="/journal">旅客游记</a></li>
+                  </ul>
+            </div>
+            <div class="ri" style="float:left;margin:25px 0px 0px 20px;">开启专属于你的个性化旅程</div>
+                <style>
+                    *{
+                    margin:0;
+                    padding:0;
+                    }
+                    li{list-style:none;}
+                    a{text-decoration:none;}
+                    #daohang .right li{
+                    padding:0px 18px;
+                    height:100%;
+                    float:left;
+                    font-size:18px;
+                    line-height:70px;
+                    }
+                    #daohang .right li:hover{
+                    background:#66cc99;
+                    }
+                    #daohang .right a{
+                    color:#00925f;
+                    }
+                    #daohang .right a:hover{
+                    color:white;
+                    }
+                </style>
+        </div>
+    </div>
+    <!--轮播图-->
+    <div id="banner" style="margin-top:70px;">
+        <div class="swiper-container swiper-container-horizontal swiper-container-fade" style="cursor: grab;width:100%;height:100%;">
+            <div class="swiper-wrapper" style="transition-duration: 1ms;">
+                <div class="swiper-slide" data-swiper-slide-index="1"
+                     style="width: 762px; transform: translate3d(-1524px, 0px, 0px); opacity: 1; transition-duration: 1ms;">
+                    <img src="https://pic.imgdb.cn/item/64323c220d2dde5777e4eb33.jpg" width="100%;" height="100%">
+                </div>
+                <div class="swiper-slide" data-swiper-slide-index="2"
+                     style="width: 762px; transform: translate3d(-1524px, 0px, 0px); opacity: 1; transition-duration: 1ms;">
+                    <img src="https://pic.imgdb.cn/item/643d53e20d2dde57777ab6ef.jpg" width="100%;" height="100%">
+                </div>
+                <div class="swiper-slide" data-swiper-slide-index="3"
+                     style="width: 762px; transform: translate3d(-2286px, 0px, 0px); opacity: 1; transition-duration: 1ms;">
+                    <img src="https://pic.imgdb.cn/item/643d54170d2dde57777af293.jpg" width="100%;" height="100%">
+                </div>
+            </div>
+            <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
+                <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+                <span class="swiper-pagination-bullet"></span>
+                <span class="swiper-pagination-bullet"></span>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        <div class="banner-nav-bg"></div>
+        <div class="searchbar" id="_j_index_search_bar_all" style="width:100%;height:80px;position:absolute;z-index:998;top:450px;padding-left:350px;">
+            <div class="search-wrapper" style="width:1280px;height:100%;margin:auto;">
+                <div style="width:650px;height:100%;background:black;border-radius:5px;background:rgba(0,0,0,0.4);">
+                    <form action="/home" method="post">
+                        <div class="search-input" style="float:left;width:400px;height:50px;margin-top:15px;margin-left:10px;">
+                            <input type="text" id="_j_index_search_input_all" name="content" list="appNamelist" placeholder="搜索景点" autocomplete="off"
+                                   style="width:100%;height:100%;border-style:none;border-radius:5px;outline:none;">
+                            <div style=" display: block;">
+                                <datalist id="appNamelist">
+                                    <option value="白马寺">白马寺</option>
+                                    <option>天子驾六博物馆</option>
+                                    <option>隋唐洛阳城国家遗址公园</option>
+                                    <option>丽景门</option>
+                                    <option>关林庙</option>
+                                    <option>龙门石窟</option>
+                                    <option>东山石窟</option>
+                                    <option>西山石窟</option>
+                                    <option>王城公园</option>
+                                    <option>洛阳博物馆</option>
+                                    <option>洛阳古代艺术博物馆</option>
+                                    <option>老君山</option>
+                                    <option>开元湖音乐喷泉</option>
+                                    <option>明堂·万象神宫</option>
+                                    <option>重渡沟风景区</option>
+                                    <option>汉光武帝陵</option>
+                                    <option>龙马负图寺</option>
+                                    <option>王铎故居</option>
+                                    <option>济源黄河小浪底风景区</option>
+                                    <option>小浪底黄河三峡</option>
+                                    <option>塔西烧烤城</option>
+                                    <option>鸡冠洞</option>
+                                    <option>隋唐大运河博物馆</option>
+                                    <option>民俗博物馆</option>
+                                    <option>文峰塔 </option>
+                                </datalist>
+                            </div>
+                        </div>
+                        <div class="search-button" id="_j_index_search_btn_all" style="float:left;margin-top:14px;margin-left:3px;">
+                            <button  class="button1" style="cursor:pointer;border-radius:8px;height: 52px;width: 62px;margin-right: -9px;background-color:#66cc99;border-style: none;" type="submit">
+                                <span class="icon-search " style="color:white;font-size:20px;font-family:cursive, sans-serif;">搜索</span>
+                            </button>
+                        </div>
+                        <div class="route" style="float:left;height: 52px;width:100x;background:#66cc99;border-radius:8px;margin-left:16px;margin-top:14px;">
+                            <div class="main" style="height: 52px;width:100x;padding-top:14px;">
+                                <a href="/plan" style="height: 52px;width:100x;color:white;font-family:cursive, sans-serif;font-size:20px;">一键开启个性规划</a>
+<!--                                <style>-->
+<!--                                    #banner .searchbar .search-wrapper .route .main a:hover{-->
+<!--                                    background-color:black;-->
+<!--                                    }-->
+<!--                                </style>-->
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--    star-->
+    <div id="star" style="margin-top:20px;">
+        <div class="container" style="width:1300px;height:100%;margin:auto;">
+            <div class="jieshao" style="width:20%;margin:0px auto;">
+                <div>
+                    <p style="text-align:center;color:#222222;font-size:30px;font-family:微软雅黑;">洛阳神都</p>
+                    <p style="text-align:center;color:#666666">Luo Yang</p>
+                    <p style="text-align:center;color:#666666">推荐出游月份：3~5月,9~11月</p>
+                </div>
+            </div>
+            <ul>
+                <li style="margin-left:100px;">
+                    <div >
+                        <img src="https://pic.imgdb.cn/item/641c7137a682492fcc4600eb.jpg">
+                    </div>
+                    <p>总要和朋友来洛阳逛一逛的吧！</p>
+                    <p class="describe">千年帝都，中国洛阳<span></span></p>
+                </li>
+                <li class="line"></li>
+                <li>
+                    <div>
+                        <img src="https://pic.imgdb.cn/item/641c716da682492fcc4676e5.jpg">
+                    </div>
+                    <p>感受一下盛唐的魅力</p>
+                    <p class="describe">隋唐一梦,一眼千年 <span></span></p>
+                </li>
+                <li class="line"></li>
+                <li>
+                    <div>
+                        <img src="https://pic.imgdb.cn/item/641c717ea682492fcc46be9e.jpg">
+                    </div>
+                    <p>和伙伴一起去爬老君山</p>
+                    <p class="describe">道教名山，登高望远<span></span></p>
+                </li>
+                <li class="line"></li>
+                <li>
+                    <div>
+                        <img src="https://pic.imgdb.cn/item/641c7152a682492fcc463da6.jpg">
+                    </div>
+                    <p>逛一逛龙门石窟</p>
+                    <p class="describe">洛都四郊，龙门首焉<span></span></p>
+                </li>
+            </ul>
+        </div>
+        <style>
+            #star{
+            height: 570px;
+            background-color:white;;
+            }
+            #star ul{
+                width: 1263px;
+                height:100%;
+                margin: 20px auto;
+            }
+            #star li>div{
+            overflow: hidden;
+            border-radius:15px;
+            }
+            #star li{
+                width: 250px;
+                float: left;
+                border-bottom: 4px solid #DFDFDF;
+                transition: all .3s;
+            }
+            #star li:hover{
+                border-bottom: 4px solid #4FB59D;
+                transform: translateY(-10px);
+            }
+            #star li img{
+                width: 250px;
+                height:350px;
+                border-radius:15px;
+                transform:scale(1.0);
+                transition: all 2s;
+            }
+            #star li img:hover{
+            transform:scale(1.2);
+            }
+            #star li p{
+                text-align: center;
+                margin: 10px 0px;
+                font-size: 12px;
+                color: #BDBDBD;
+            }
+            #star .describe{
+                color: #00925F;
+                font-size: 14px;
+            }
+            #star li span{
+                width: 13px;
+                height: 13px;
+                display: inline-block;
+                vertical-align: middle;
+            }
+            #star .line{
+                width: 0px;
+                height: 450px;
+                border-left: 1px solid white;
+                margin: 0px 10px;
+            }
+        </style>
+    </div>
+<!--    热门路线-->
+    <div id="hot-route" style="width:100%;height:800px;background-image: linear-gradient(#D5F7D5, #E0FCFC);clear:both;">
+        <div class="main" style="width:1280px;height:100%;margin:auto;">
+            <div class="title" style="text-align:center;color:white;width:100%;height:40px;padding-top:20px;"><h1>热门旅游路线</h1></div>
+            <div class="route" style="width:1000px;height:650px;margin-left:140px;">
+                <div class="content1">
+                    <div class="image"><a href="a洛阳全景4日路线.html"><img src="https://pic.imgdb.cn/item/641c70b9a682492fcc44faac.jpg"></a></div>
+                    <div class="name"><a href="a洛阳全景4日路线.html"><h2>洛阳全景4日路线</h2></a></div>
+                    <div class="describe">路线整体上是以游古城为主，挑选一天来赏花，假期带着家人来洛阳，享受人间天伦之乐。本条路线不仅适合家庭游，好友同游也可以进行参照。<br>适合人群：家庭游<br>适合月份：4,5月份</div>
+                </div>
+                <div class="content1">
+                    <div class="image"><a href="a洛阳景点文化2日线路.html"><img src="https://pic.imgdb.cn/item/643941250d2dde57770395ff.jpg"></a></div>
+                    <div class="name"><a href="a洛阳景点文化2日线路.html"><h2>洛阳景点文化2日线路</h2></a></div>
+                    <div class="describe">洛阳，洛水之阳（古时人称山南水北为阳）。它的风景犹如它的名字一般让人心神向往。它是中华文明史上最为古老的帝都王城，是中华文化的读本。<br>适合人群：所有人群<br>适合月份：春季，秋季</div>
+                </div>
+                <div class="content1">
+                    <div class="image"><a href="a洛阳周边赏秋2日线路.html"><img src="https://pic.imgdb.cn/item/641c6ff1a682492fcc435781.jpg"></a></div>
+                    <div class="name"><a href="a洛阳周边赏秋2日线路.html"><h2>洛阳周边赏秋2日线路</h2></a></div>
+                    <div class="describe">小假期或周末不想远途游，那就考虑周边风景名胜吧！周边有山有水，风景四季各异，不失为休闲散心的好去处。<br>适合人群：所有人群<br>适合月份：秋季</div>
+                </div>
+                <div class="content1">
+                    <div class="image"><a href="a洛阳古韵气息2日线路.html"><img src="https://pic.imgdb.cn/item/641c70dfa682492fcc4551c7.jpg"></a></div>
+                    <div class="name"><a href="a洛阳古韵气息2日线路.html"><h2>洛阳古韵气息2日线路</h2></a></div>
+                    <div class="describe">游洛阳二日，内容丰富，白天看景点，晚上逛街吃小吃，体验当地老城的生活。路程安排宽松，边看边玩，走遍洛阳城。<br>适合人群：所有人群<br>适合月份：4-5月 9-11月</div>
+                </div>
+                <div class="content1">
+                    <div class="image"><a href="a洛阳自然之旅2日线路.html"><img src="https://pic.imgdb.cn/item/643941d00d2dde5777042b8d.jpg"></a></div>
+                    <div class="name"><a href="a洛阳自然之旅2日线路.html"><h2>洛阳自然之旅2日线路</h2></a></div>
+                    <div class="describe">云海、佛光、日出、雾凇，只需来到洛阳的后花园——栾川，你便可以尽收眼底。栾川的风景美得让人心醉，寄情于栾川的山水，如同徜徉在世外桃源，我们可以用两天的时间去欣赏栾川瑰丽的自然风光。<br>适合人群：所有人群<br>适合月份：春季，秋季</div>
+                </div>
+                <div class="content1">
+                    <div class="image"><a href="a洛阳经典3日线路.html"><img src="https://pic.imgdb.cn/item/643941970d2dde577703f782.jpg"></a></div>
+                    <div class="name"><a href="a洛阳经典3日线路.html"><h2>洛阳经典3日线路</h2></a></div>
+                    <div class="describe">洛阳：白马寺 > 天子驾六博物馆 > 隋唐洛阳城国家遗址公园天堂明堂景区 > 丽景门景区<br>适合人群：家庭、情侣、老人<br>适合月份：一年四季</div>
+                </div>
+            </div>
+            <div class="button" style="height:50px;width:13%;background-color:white;margin:auto;margin-top:15px;border-radius:10px;">
+                <a href="/classic" style="padding:12px 27px;border: none;color:#66cc99;text-align:center;text-decoration: none;display: inline-block;font-size: 18px;cursor: pointer;">查看更多路线</a>
+                <style>
+                #hot-route .main .button:hover{
+                box-shadow: 0 10px 12px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+                }
+                </style>
+            </div>
+        </div>
+        <style>
+            #hot-route .main .route .content1{
+            width:300px;
+            height:300px;
+            margin:15px 16px 5px 16px;
+            float:left;
+            }
+            #hot-route .main .route .content1 .image{
+            overflow: hidden;
+            height:170px;
+            width:100%;
+            }
+            #hot-route .main .route .content1 .image img{
+            height:100%;
+            width:100%;
+            }
+            #hot-route .main .route .content1 .image img:hover{
+            transform:scale(1.1);
+            transition:2s;
+            }
+            #hot-route .main .route .content1 .name{
+            width:100%;
+            height:30px;
+            background:#000;
+            position: relative;
+            top:-30px;
+            z-index=999;
+            filter: opacity(60%);
+            }
+            #hot-route .main .route .content1 .name h2{
+            color:white;
+            text-align:center;
+            }
+            #hot-route .main .route .content1 .describe{
+            width:95%;
+            height:130px;
+            margin-top:-30px;
+            background:white;
+            filter: opacity(80%);
+            padding:8px;
+            }
+            #hot-route .main .route .content1 .describe:hover{
+            background:	white;
+            filter: opacity(100%);
+            }
+        </style>
+    </div>
+<!--    热门游记-->
+    <div id="hot-travel" style="width:100%;height:1230px;">
+        <div class="main" style="width:1280px;height:100%;margin:auto;">
+            <div class="title" style="text-align:center;color:#222222;font-size:30px;font-family:微软雅黑;width:100%;height:70px;padding-top:30px;">热门游记
+                <a href="/journal"style="font-size:18px;color:#888888;margin-left:20px;">更多游记</a>
+            </div>
+            <div class="Traval" style="width:80%;height:100%;margin:auto;">
+                <div class="traval 1">
+                    <div class="image">
+                        <a href="/static/templates/风景-1.html">
+                            <img src="https://dimg03.c-ctrip.com/images/100a11000000r35kpB93B_R_1000_10000_Q90.jpg?proc=autoorient">
+                        </a>
+                    </div>
+                    <div class="text">
+                        <div class="title"><a href="/static/templates/风景-1.html">2019春节行纪|走进神都洛阳，访十三朝古都遗址</a></div>
+                        <div class="author">✍鸭鸭爱生活</div>
+                        <div class="content"><a href="/static/templates/风景-1.html">神都洛阳，一个十三朝的皇城，相比起西安，他无疑低调许多，更像一个老者，淡定的坐在伊河之畔，你来或不来，我依然在那里。古往今来，描写洛阳的诗词名句多不胜数，洛阳的花，洛阳的繁华盛世，都在那一句句诗词中...</a></div>
+                    </div>
+                </div>
+                <div class="traval 2">
+                    <div class="image">
+                        <a href="/static/templates/美食-1.html">
+                            <img src="https://youimg1.c-ctrip.com/target/10091c000001cpkf2BF46.jpg">
+                        </a>
+                    </div>
+                    <div class="text">
+                        <div class="title"><a href="/static/templates/美食-1.html">我用身上多出的十斤肉肉向大家汇报，洛阳应该这样玩！</a></div>
+                        <div class="author">✍喵小瞄爱漂</div>
+                        <div class="content"><a href="/static/templates/美食-1.html">一份工作把我带到这座城市。 洛阳，这座城市不陌生。小时候一到寒暑假都会回爷爷奶奶家小住几天，在吃吃喝喝中度过仅有的假期，然后不得不面对我那残酷的开学现实啦～...</a></div>
+                    </div>
+                </div>
+                <div class="traval 3">
+                    <div class="image">
+                        <a href="/static/templates/出行-3.html">
+                            <img src="https://dimg04.c-ctrip.com/images/0104c120008p4xta9E659_R_1000_10000_Q90.jpg?proc=autoorient">
+                        </a>
+                    </div>
+                    <div class="text">
+                        <div class="title"><a href="/static/templates/出行-3.html">我去洛阳自由行</a></div>
+                        <div class="author">✍夏宁葆</div>
+                        <div class="content"><a href="/static/templates/出行-3.html">我们是从三门峡乘坐绿皮火车硬座，前往洛阳。1个多小时，票价19元5角。洛阳市地处九州腹地，横跨黄河中游南北两岸，东邻郑州，西接三门峡，北跨黄河与焦作接壤，南与 平顶山 、南阳相连...</a></div>
+                    </div>
+                </div>
+                <div class="traval 4">
+                    <div class="image">
+                        <a href="/static/templates/出行-1.html">
+                            <img src="https://dimg04.c-ctrip.com/images/1mf1t12000ax5zleyA86C_R_1000_10000_Q90.jpg?proc=autoorient">
+                        </a>
+                    </div>
+                    <div class="text">
+                        <div class="title"><a href="/static/templates/出行-1.html">推着轮椅看牡丹-洛阳无障碍攻略</a></div>
+                        <div class="author">✍兰雪儿1973</div>
+                        <div class="content"><a href="/static/templates/出行-1.html">决定去洛阳看牡丹之后，一直想找一篇关于洛阳无障碍出行的攻略，竟然没有如愿。所以自己尝试以后决定写一篇，希望身体不方便的朋友勇敢走出去...</a></div>
+                    </div>
+                </div>
+                <div class="traval 5">
+                    <div class="image">
+                        <a href="/static/templates/美食-4.html">
+                            <img src="https://dimg03.c-ctrip.com/images/1008180000013sfs4345E_C_1000_10000_Q90.jpg?proc=autoorient">
+                        </a>
+                    </div>
+                    <div class="text">
+                        <div class="title"><a href="/static/templates/美食-4.html">山里大厨也能做出一桌好菜，这些河南人最爱的，你都吃过吗？</a></div>
+                        <div class="author">✍图说故事520</div>
+                        <div class="content"><a href="/static/templates/美食-4.html">一方美景让人爱上一个地方，具有当地特色的美食又何尝不是如此。此次洛阳白云山之行，由于深处168平方公里的伏牛山腹地，原本对美食没有期待，必定，那些传统美味都隐匿城市街头巷尾或高堂大厦中～...</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style>
+        #hot-travel .main .title a:hover{
+        font-size:120%;
+        color:#D5F7F7;
+        }
+        #hot-travel .main .Traval .traval{
+        width:100%;
+        height:220px;
+        border:1px solid #eeeeee;
+        margin-bottom:5px;
+        background:#F2FBFB;
+        }
+        #hot-travel .main .Traval .traval:hover{
+        background:#D5F7F7;
+        }
+        #hot-travel .main .Traval .traval .image{
+        float:left;
+        width:33%;
+        height:200px;
+        margin:10px 15px 10px 5px;
+        overflow: hidden;
+        }
+        #hot-travel .main .Traval .traval img{
+        width:100%;
+        height:200px;
+        }
+        #hot-travel .main .Traval .traval img:hover{
+        transition: all 1.5s;
+        transform:scale(1.2);
+        }
+        #hot-travel .main .Traval .traval .text{
+        float:left;
+        //border:2px solid black;
+        width:63%;
+        height:150px;
+        margin:10px 0px;
+        }
+        #hot-travel .main .Traval .traval .text .title a{
+        font: inherit;
+        font-size:18px;
+        color:black;
+        }
+        #hot-travel .main .Traval .traval .text .title a:hover{
+        color:#66cc99;
+        }
+        #hot-travel .main .Traval .traval .text .author{
+        font-family:Palatino;
+        color:#6F6F6F;
+        margin-top:10px;
+        }
+        #hot-travel .main .Traval .traval .text .content{
+        margin-top:15px;
+        }
+        #hot-travel .main .Traval .traval .text .content a{
+        font-family:Palatino;
+        color:#B2B8AD;
+        }
+        </style>
+    </div>
+<!--    页面-->
+    <div class="page" style="width:100%;height:80px;">
+        <div style="width:1280px;height:100%;margin:auto;">
+            <div style="width:200px;height:80%;margin:auto;">
+                <div style="width:40px;height:30px;color:black;padding-left:5px;padding-top:10px;float:left;margin-top:20px;border:1px solid #eeeeee;">第1页</div>
+                <div style="width:40px;height:30px;color:black;padding-left:5px;padding-top:10px;float:left;margin-top:20px;border:1px solid #eeeeee;">共1页</div>
+            </div>
+        </div>
+    </div>
+<!--尾部-->
+    <div id="footer">
+       <div class="main">
+           <div class="about auc">
+               <div class="first">关于我们</div>
+               <div  class="follow"><a href="#">关于我们</a></div>
+               <div class="follow"><a href="#">联系我们</a></div>
+           </div>
+           <div class="user auc">
+               <div class="first">用户反馈</div>
+               <div class="follow"><a href="#">意见反馈</a></div>
+               <div class="follow"><a href="#">常见问题</a></div>
+           </div>
+           <div class="call auc">
+                <div class="first">联系方式</div>
+               <div class="follow"><a href="#">微信</a></div>
+               <div class="follow"><a href="#">微博</a></div>
+           </div>
+<!--           <div class="bottom">-->
+<!--                <div>企业号为：1234567890</div>-->
+<!--           </div>-->
+       </div>
+            <style>
+        *{
+        margin:0;
+        padding:0;
+        }
+        li{list-style:none;}
+        a{text-decoration:none;}
+        #footer{
+        clear:both;
+        background:	#F8F8F8;
+        width:100%;
+        height:100px;
+        }
+        #footer .main{
+        width:1280px;
+        height:100px;
+        margin:auto;
+        }
+        #footer .main .auc{
+        float:left;
+        width:150px;
+        height:80px;
+        margin:5px 10px;
+        }
+        #footer .main .about{
+        margin:5px 10px 5px 360px;
+        }
+        #footer .main .bottom{
+        clear:both;
+        width:400px;
+        height:50px;
+        margin:5px auto;
+        }
+        #footer .main .first{
+        width:50%;
+        margin:5px auto;
+        padding-left:20px;
+        }
+        #footer .main .follow{
+        width:50%;
+        margin:5px auto;
+        padding-left:20px;
+        }
+        #footer .main .call .follow{
+        padding-left:40px;
+        }
+        #footer .main .first a{
+        font:normal normal 17px/1.5em Sans-serif;
+        }
+        #footer .main .follow a{
+        font:normal normal 10px/1.5em Sans-serif;
+        color:#484848;
+        }
+    </style>
+    </div>
+    <script type="text/javascript" src="\static\JS\swiper.js"></script>
+    <script type="text/javascript">
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            loop: true,
+            autoplay: 3000,
+            speed: 1000,
+            prevButton: '.swiper-button-prev',
+            nextButton: '.swiper-button-next',
+            effect: 'fade',//  effect: 'flip',effect: 'coverflow',slide', 'fade',cube
+            grabCursor: true,
+            cube: {
+                shadow: false,
+                slideShadows: false,
+                shadowOffset: 20,
+                shadowScale: 0.94
+            }
+        });
+    </script>
 </body>
 </html>

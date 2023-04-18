@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <title>天子驾六博物馆-洛阳博物馆-丽景门景区-王铎故居-隋唐洛阳城国家遗址公园-洛阳老街</title>
+        <link rel="shortcut icon" href="https://pic.imgdb.cn/item/642ad0faa682492fcc1f723e.jpg" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://a.amap.com/jsapi_demos/static/demo-center/css/demo-center.css"/>
+    <style>
+        html, body, #container {
+            height: 100%;
+            width: 100%;
+        }
+
+        .input-card .btn{
+            margin-right: 1.2rem;
+            width: 9rem;
+        }
+
+        .input-card .btn:last-child{
+            margin-right: 0;
+        }
+    </style>
+</head>
+<body>
+<div id="container"></div>
+<div class="input-card">
+    <h4>天子驾六博物馆-洛阳博物馆-丽景门景区-王铎故居-隋唐洛阳城国家遗址公园-洛阳老街</h4>
+    <div class="input-item">
+        <input type="button" class="btn" value="开始动画" id="start" onclick="startAnimation()"/>
+        <input type="button" class="btn" value="暂停动画" id="pause" onclick="pauseAnimation()"/>
+    </div>
+    <div class="input-item">
+        <input type="button" class="btn" value="继续动画" id="resume" onclick="resumeAnimation()"/>
+        <input type="button" class="btn" value="停止动画" id="stop" onclick="stopAnimation()"/>
+    </div>
+</div>
+ <script type="text/javascript">
+         window._AMapSecurityConfig = {
+             securityJsCode:'7b752ad33effbde7434b12705bb80c0a',
+         }
+         </script>
+<script type="text/javascript" src="https://webapi.amap.com/maps?v=2.0&key=70f228a06b3aba233e0eb8d54b31526e"></script>
+<script>
+    // JSAPI2.0 使用覆盖物动画必须先加载动画插件
+    AMap.plugin('AMap.MoveAnimation', function(){
+        var marker, lineArr = [[112.443146,34.67401],[112.451541,34.643323],[112.471252,34.680899],[112.649381,34.810664],[112.455942,34.680804],[112.479198,34.681411]];
+
+        var map = new AMap.Map("container", {
+            resizeEnable: true,
+            center: [112.443146,34.67401],
+            zoom: 17
+        });
+
+        marker = new AMap.Marker({
+            map: map,
+            position: [112.443146,34.67401],
+            icon: "https://a.amap.com/jsapi_demos/static/demo-center-v2/car.png",
+            offset: new AMap.Pixel(-13, -26),
+        });
+
+        // 绘制轨迹
+        var polyline = new AMap.Polyline({
+            map: map,
+            path: lineArr,
+            showDir:true,
+            strokeColor: "#28F",  //线颜色
+            // strokeOpacity: 1,     //线透明度
+            strokeWeight: 6,      //线宽
+            // strokeStyle: "solid"  //线样式
+        });
+
+        var passedPolyline = new AMap.Polyline({
+            map: map,
+            strokeColor: "#AF5",  //线颜色
+            strokeWeight: 6,      //线宽
+        });
+
+
+        marker.on('moving', function (e) {
+            passedPolyline.setPath(e.passedPath);
+            map.setCenter(e.target.getPosition(),true)
+        });
+
+        map.setFitView();
+
+        window.startAnimation = function startAnimation () {
+            marker.moveAlong(lineArr, {
+                // 每一段的时长
+                duration: 2000,//可根据实际采集时间间隔设置
+                // JSAPI2.0 是否延道路自动设置角度在 moveAlong 里设置
+                autoRotation: true,
+            });
+        };
+
+        window.pauseAnimation = function () {
+            marker.pauseMove();
+        };
+
+        window.resumeAnimation = function () {
+            marker.resumeMove();
+        };
+
+        window.stopAnimation = function () {
+            marker.stopMove();
+        };
+    });
+</script>
+</body>
+</html>

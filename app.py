@@ -1,6 +1,6 @@
 import networkx as nx
 import requests
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 import random
 from poi import all_poi
 import copy
@@ -143,9 +143,11 @@ def Dijstrle(a):
     print(mapp)
 
 
-# like_poi = {'龙门石窟': all_poi['龙门石窟'], '隋唐洛阳城国家遗址公园': all_poi['隋唐洛阳城国家遗址公园'],
-#          '白马寺': all_poi['白马寺'], '王城公园': all_poi['王城公园'], '丽景门': all_poi['丽景门']}
+like_poi = {'龙门石窟': all_poi['龙门石窟'], '隋唐洛阳城国家遗址公园': all_poi['隋唐洛阳城国家遗址公园'],
+         '白马寺': all_poi['白马寺'], '王城公园': all_poi['王城公园'], '丽景门': all_poi['丽景门']}
 #Dijstrle(like_poi)
+
+
 
 def roadtime(a):
     lat = []
@@ -164,16 +166,30 @@ def roadtime(a):
 
     t = 0
     i = len(lat) - 1
+    h = copy.deepcopy(i)
+    road_time = [0]*20
     while i:
         m, n = get_dis_tm(order1[t], order1[t + 1])
         i = i - 1
         t = t + 1
-        return int(n/60)
+        j = int(n / 60)
+        road_time[t-1] = j
+    return road_time
 
-#print("测试roadtime")
-#final_poi = ['洛阳老街', '老君山', '隋唐洛阳城国家遗址公园', '白云山', '王城公园']
-#roadtime(final_poi)
 
+# print("测试roadtime")
+# final_poi = ['洛阳老街', '老君山', '隋唐洛阳城国家遗址公园', '白云山', '王城公园']
+# roadtime(final_poi)
+
+def playtime(a):
+    play_time = []
+    for k in a:
+        play_time.append(all_poi[k].time)
+    return play_time
+
+t = playtime(like_poi)
+print("看看")
+print(t)
 
 # ==========================================================================================路由
 @app.route("/", methods=['GET', 'POST'])
@@ -181,8 +197,8 @@ def root():
     a = '公园'
     Get_poi(a)  # 第一遍推荐
     if request.method == 'GET':
-        #Dijstrle()
-        return render_template('map.html',order=mapp,final=final)  # 第一个界面，统计用户喜好
+        # Dijstrle()
+        return render_template('map.html', order=mapp, final=final)  # 第一个界面，统计用户喜好
     elif request.method == 'POST':  # 输出：person属性值
         a = request.form.get('test')
         if a == '白马寺':
@@ -190,24 +206,16 @@ def root():
 
 
 @app.route("/home", methods=['GET', 'POST'])
-def plan():
+def home():
+    if request.method == 'GET':
+        return render_template('function.html')
     if request.method == 'POST':  # 收到function.html提交的表单，根据用户选择的功能跳转不同的页面
-
-        a = request.values.get('按钮一')  # 如果选择了按钮一，那么a=按钮一.value   如果没有选择 a=None if不会实现
-        b = request.values.get('按钮二')
-        c, d, e, f, = 1
-        if a == '路径规划':  # /plan
-            return render_template('a.html', like_poi=like_poi)
-        if b == '景点查询':  # /poi  #琛琛
-            return render_template('b.html')
-        if c == '旅游盲盒':  # /blind   琛琛
-            return render_template('c.html')
-        if d == '热门路线':  # /classic   小黄
-            return render_template('d.html')
-        if e == '旅客游记':  # /journal  候姐
-            return render_template('e.html')
-        if f == '日程规划':  # /schedule    燕莉
-            return render_template('f.html')
+        if request.method == 'POST':
+            name = request.form.get('content')
+            final_name = name + '1.html'
+            if name:
+                return render_template(final_name)
+        return render_template('b.html')
 
 
 # =============================================================路径规划功能下所有路由
@@ -269,14 +277,134 @@ def classic_detail(num):
 
 # =================================================================旅客游记
 @app.route("/journal", methods=['GET', 'POST'])
-def journal():  #
-    1
+def journal():
+    if request.method == 'GET':
+        return render_template('e.html')
+    if request.method == 'POST':
+        a=request.values.get('fengjing');
+        if a=='风景':
+            return redirect('/journal/fengjing');
+        a = request.values.get('meishi');
+        if a=='美食':
+            return redirect('/journal/meishi');
+        a = request.values.get('chuxing');
+        if a=='出行':
+            return redirect('/journal/chuxing');
+        a = request.values.get('remen');
+        if a == '热门':
+            return redirect('/journal');
+
+@app.route("/journal/fengjing", methods=['GET', 'POST'])
+def fengjing():
+    return render_template('e-风景.html');
+@app.route("/journal/meishi", methods=['GET', 'POST'])
+def meishi():
+    return render_template('e-美食.html');
+@app.route("/journal/chuxing", methods=['GET', 'POST'])
+def chuxing():
+    return render_template('e-出行.html');
 
 
 # =================================================================日程规划
 @app.route("/schedule", methods=['GET', 'POST'])
 def schedule():  #
-    1
+    if request.method == 'POST':  # 收到function.html提交的表单，根据用户选择的功能跳转不同的页面
+        return render_template('map.html', order=mapp, final=final)
+
+
+@app.route("/schedule2", methods=['GET', 'POST'])
+def schedule2():  #
+    # if request.method == 'POST':  # 收到function.html提交的表单，根据用户选择的功能跳转不同的页面
+    l=len(final)
+    return render_template('f1.html',l=l)
+
+
+@app.route("/schedule1", methods=['GET', 'POST'])
+def schedule1():  #
+
+    if request.method == 'POST':  # 收到function.html提交的表单，根据用户选择的功能跳转不同的页面
+        a = request.values.get('planhome-select-month1')
+        b = request.values.get('planhome-select-time1')
+    if a == None:
+        a = "五月"
+    if b == None:
+        b = "8"
+    if a == '二月':
+        c = '冬季'
+    if a == '十二月':
+        c = '冬季'
+    if a == '一月':
+        c = '冬季'
+    if a == '三月':
+        c = '春季'
+    if a == '四月':
+        c = '春季'
+    if a == '五月':
+        c = '春季'
+    if a == '六月':
+        c = '夏季'
+    if a == '七月':
+        c = '夏季'
+    if a == '八月':
+        c = '夏季'
+    if a == '九月':
+        c = '秋季'
+    if a == '十月':
+        c = '秋季'
+    if a == '十一月':
+        c = '秋季'
+
+    tupian = [
+        'https://tr-osdcp.qunarzz.com/tr-osd-tr-manager/img/462c4e530af6caa44c5a04a4d9c0dea7.jpg',
+        'https://n.sinaimg.cn/sinakd10116/327/w1280h647/20200807/0d8f-ixkvvuc9545457.jpg',
+        'https://pic4.zhimg.com/v2-9d17501b331dc0f6b8d3081a350c5d8b_r.jpg',
+        'https://pic3.zhimg.com/v2-4ce7925241724faf003d7b6abf9f1e93_r.jpg?source=1940ef5c',
+        'https://img1.qunarzz.com/travel/d2/1805/9c/04962be104bdceb5.jpg_r_680x453x95_87356ff1.jpg'
+    ]
+
+    if len(final) != 0:
+        l = len(final)
+        road_time = roadtime(final)
+        play_time = playtime(final)
+        tunum = random.randint(1, l);
+        t1 = []
+        t2 = []
+        t1.append(int(b))
+        t2.append("%02d" % 0)
+        m = int(b)
+        n = 0
+        if t1[0] == 18:
+            t1[0] = 8
+            m = 8
+        if t1[0] == 12:
+            t1[0] = 13
+            m = 13
+        num = 1
+
+        for i in range(len(road_time)):
+            n = n + play_time[i];
+            while n > 60:
+                n = n - 60
+                m = m + 1
+            if m >= 18:
+                m = 8
+            if m >= 12 and m < 13:
+                m = 13
+            n = n + road_time[i];
+            while n > 60:
+                n = n - 60
+                m = m + 1
+            if m >= 18:
+                m = 8
+            if m >= 12 and m < 13:
+                m = 13
+            t1.append(m)
+            t2.append("%02d" % n)
+
+        return render_template('starts.html', c=c, t1=t1, t2=t2, l=l, poi=poi, a=a, b=b, order1=final,
+                               play_time=play_time, road_time=road_time, tupian=tupian, tunum=tunum)  # 返回后端数据
+    else:
+        return render_template('start.html')
 
 
 # ==================================================================主函数

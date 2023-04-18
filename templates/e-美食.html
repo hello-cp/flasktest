@@ -1,0 +1,322 @@
+{% extends 'daohang.html' %}
+{% block home_page %}
+<head>
+    <link rel="stylesheet" href="\static\CSS\swiper.css">
+    <style type="text/css">
+		body {
+            background: white;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+            overflow:scroll;
+        }
+        .swiper-slide {
+            text-align: left;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+        *{
+        margin:0;
+        padding:0;
+        }
+        li{list-style:none;}
+        a{text-decoration:none;}
+	</style>
+</head>
+<body>
+   <div id="banner" style="width:100%;height:380px;margin-top:15px;"w>
+       <div class="main" style="width:1280px;height:360px;margin:auto;">
+           <div class="leftside" style="width:210px;height:100%;float:left;margin-left:130px;">
+               <form action="\journal" method="post">
+                    <div class="but">
+                    <button class="button" type="submit" name="fengjing" value="风景"  style="vertical-align:middle"><span>风景篇游记 </span></button>
+                    <button class="button" type="submit" name="meishi" value="美食"  style="vertical-align:middle"><span>美食篇游记 </span></button>
+                    <button class="button" type="submit" name="chuxing" value="出行"  style="vertical-align:middle"><span>出行篇游记 </span></button>
+                    <button class="button" type="submit" name="remen" value="热门" style="vertical-align:middle"><span>热门游记推荐 </span></button>
+                   </div>
+               </form>
+
+                 <style>
+                  #banner .main .leftside .but .button {
+                  display: inline-block;
+                  border-radius: 4px;
+                  background-color: white;
+                  border: 2px solid #eeeeee;
+                  color: #666666;
+                  text-align: center;
+                  font-size: 20px;
+                  padding: 20px;
+                  width: 200px;
+                  transition: all 0.5s;
+                  cursor: pointer;
+                  margin: 3px;
+                  }
+                #banner .main .leftside .but .button span {
+                  cursor: pointer;
+                  display: inline-block;
+                  position: relative;
+                  transition: 0.5s;
+                }
+                #banner .main .leftside .but .button span:after {
+                  color:#66cc99;
+                  content: '»';
+                  position: absolute;
+                  opacity: 0;
+                  top: 0;
+                  right: -20px;
+                  transition: 0.5s;
+                }
+                #banner .main .leftside .but .button:hover span {
+                  padding-right: 25px;
+                }
+                #banner .main .leftside .but .button:hover span:after {
+                  opacity: 1;
+                  right: 0;
+                }
+                 </style>
+           </div>
+           <div class="swiper-container swiper-container-horizontal swiper-container-fade" style="height:100%;;width:700px;margin-right:200px;cursor: grab;">
+                <div class="swiper-wrapper" style="transition-duration: 1ms;margin:auto 0;">
+                    <div class="swiper-slide" data-swiper-slide-index="1"
+                         style="height:100%;width: 100%; transform: translate3d(-1524px, 0px, 0px); opacity: 1; transition-duration: 1ms;border-radius:10px;overflow: hidden;">
+                        <img src="https://pic.imgdb.cn/item/6438119e0d2dde5777b33853.jpg" width="100%;" height="100%" style="border-radius:10px;">
+                    </div>
+                    <div class="swiper-slide" data-swiper-slide-index="2"
+                         style="height:100%;width: 100%; transform: translate3d(-1524px, 0px, 0px); opacity: 1; transition-duration: 1ms;border-radius:10px;overflow: hidden;">
+                        <img src="https://pic.imgdb.cn/item/643793c60d2dde5777080262.jpg" width="100%;" height="100%" style="border-radius:10px;">
+                    </div>
+                    <div class="swiper-slide" data-swiper-slide-index="3"
+                         style="height:100%;width: 100%; transform: translate3d(-2286px, 0px, 0px); opacity: 1; transition-duration: 1ms;border-radius:10px;overflow: hidden;">
+                        <img src="https://pic.imgdb.cn/item/643d51020d2dde577777486a.png" width="100%;" height="100%" style="border-radius:10px;">
+                    </div>
+                </div>
+                <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
+                    <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+                    <span class="swiper-pagination-bullet"></span>
+                    <span class="swiper-pagination-bullet"></span>
+        <!--                    <span class="swiper-pagination-bullet"></span>-->
+                </div>
+<!--                <div class="swiper-button-next"></div>-->
+<!--                <div class="swiper-button-prev"></div>-->
+           </div>
+       </div>
+        <div class="banner-nav-bg"></div>
+
+   </div>
+   <div id="maincontent" style="width:100%;height:800px;border-top:1px solid #eeeeee;">
+       <div style="width:1280px;height:100%;margin:auto;">
+           <div class="leftside" style="float:left;margin-top:10px;margin-left:100px;width:260px;height:410px;border:1px solid #eeeeee;">
+                <div class="all">
+                    <div class="title">
+                        <div class="text">
+                            <div class="one"><h1>短</h1></div>
+                            <div class="two"><h1>暂</h1></div>
+                            <div class="one"><h1>逃</h1></div>
+                            <div class="two"><h1>离</h1></div>
+                            <div class="one"><h1>计</h1></div>
+                            <div class="two"><h1>划</h1></div>
+                        </div>
+                        <div class="img1">
+                            <img src="https://pic.imgdb.cn/item/641c73cca682492fcc4bbfb6.jpg">
+                        </div>
+                    </div>
+                    <div class="tip">
+                        <div>☆旅游期间应多喝开水，多吃蔬菜水果，少抽烟，少喝酒，切勿吃生食，生海鲜，暴饮暴食。</div>
+                        <div>☆乘坐交通工具请提前抵达并准备好相关证件，以免延误行程。</div>
+                        <div>☆旅游途中应自备一些常用药，以备不时之需，切勿随意服用他人提供的药。</div>
+                        <div>☆不随意接受和食用陌生人赠送的食物和饮品，防止不必要的危险。</div>
+                    </div>
+                </div>
+               <style>
+                    #maincontent .leftside .title .text{
+                    width:100%;
+                    padding-left:20px;
+                    }
+                    #maincontent .leftside .title .text div{
+                    padding:10px 4px 10px 4px;
+                    transform-style:preserve-3D;
+                    float:left;
+                    }
+                    #maincontent .leftside .title .one{
+                    color:#66cc99;
+                    text-shadow:2px 2px 4px #C4C4C4;
+                    transform:rotateZ(20deg);
+                    }
+                    #maincontent .leftside .title .two{
+                    color:#66cc99;
+                    text-shadow:2px 2px 4px #C4C4C4;
+                    transform:rotateZ(-20deg);
+                    }
+                    #maincontent .leftside .title img{
+                    width:100%;
+                    }
+                    #maincontent .leftside .tip{
+                    width:100%;
+                    padding:5px 5px 10px 5px;
+                    }
+                    #maincontent .leftside .tip div{
+                    color:#777777;
+                    font:normal normal 13px/1.5em Sans-serif;
+                    letter-spacing:4px;
+                    text-alain:center;
+                    }
+               </style>
+        </div>
+           <div class="main" style="float:left;width:880px;;height:100%;margin-left:20px;">
+                <div class="all">
+                    <div class="up" style="margin-top:10px;margin-left:10px;width:100%;height:40px;font-size:28px;font-family:monospace;">美食游记</div>
+                    <div class="down">
+                        <div class="traval 1">
+                            <div class="image">
+                                <a href="/static/templates/美食-1.html">
+                                    <img src="https://youimg1.c-ctrip.com/target/10091c000001cpkf2BF46.jpg">
+                                </a>
+                            </div>
+                            <div class="text">
+                                <div class="title"><a href="/static/templates/美食-1.html">我用身上多出的十斤肉肉向大家汇报，洛阳应该这样玩！</a></div>
+                                <div class="author">✍喵小喵爱漂</div>
+                                <div class="content"><a href="/static/templates/美食-1.html">一份工作把我带到这座城市。 洛阳，这座城市不陌生。小时候一到寒暑假都会回爷爷奶奶家小住几天，在吃吃喝喝中度过仅有的假期，然后不得不面对我那残酷的开学现实啦～...</a></div>
+                            </div>
+                        </div>
+                        <div class="traval 2">
+                            <div class="image">
+                                <a href="/static/templates/美食-2.html">
+                                    <img src="https://youimg1.c-ctrip.com/target/010691200098gpqjo57E4.jpg">
+                                </a>
+                            </div>
+                            <div class="text">
+                                <div class="title"><a href="/static/templates/美食-2.html">腊八节吃腊八粥</a></div>
+                                <div class="author">✍索易</div>
+                                <div class="content"><a href="/static/templates/美食-2.html">今天是2022年1月8日，马上该喝腊八粥了，可今年西安郑州疫情来袭，洛阳新安县也受波及，洛阳白马寺、龙门石窟、关林暂时关闭，想必去白马寺喝腊八粥的习惯今年是完不成了...</a></div>
+                            </div>
+                        </div>
+                        <div class="traval 3">
+                            <div class="image">
+                                <a href="/static/templates/美食-3.html">
+                                    <img src="https://dimg04.c-ctrip.com/images/100s14000000xaq3h0F9F_R_1000_10000_Q90.jpg?proc=autoorient">
+                                </a>
+                            </div>
+                            <div class="text">
+                                <div class="title"><a href="/static/templates/美食-3.html">一细雨湿流光 庭有牡丹芳 - 洛阳四日 [2019.4.20-23]</a></div>
+                                <div class="author">✍小小樱逃腾</div>
+                                <div class="content"><a href="/static/templates/美食-3.html">生命的过程，无论是 阳春 白雪，青菜豆腐，我都得尝尝是什么滋味，才不枉来走这么一遭。 ——三毛 《撒哈拉的故事》...</a></div>
+                            </div>
+                        </div>
+                        <div class="traval 4">
+                            <div class="image">
+                                <a href="/static/templates/美食-4.html">
+                                    <img src="https://dimg03.c-ctrip.com/images/1008180000013sfs4345E_C_1000_10000_Q90.jpg?proc=autoorient">
+                                </a>
+                            </div>
+                            <div class="text">
+                                <div class="title"><a href="/static/templates/美食-4.html">山里大厨也能做出一桌好菜，这些河南人最爱的，你都吃过吗？</a></div>
+                                <div class="author">✍图说故事520</div>
+                                <div class="content"><a href="/static/templates/美食-4.html">一方美景让人爱上一个地方，具有当地特色的美食又何尝不是如此。此次洛阳白云山之行，由于深处168平方公里的伏牛山腹地，原本对美食没有期待，必定，那些传统美味都隐匿城市街头巷尾或高堂大厦中...</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <style>
+                        #maincontent .main .all .down .traval{
+                        width:100%;
+                        height:180px;
+                        margin:5px 0px 5px 5px;
+                        }
+                        #maincontent .main .all .down .traval:hover{
+                        background:#F1FCF8;
+                        }
+                        #maincontent .main .all .down .traval .image{
+                        float:left;
+                        width:250px;
+                        height:160px;
+                        margin:10px 5px;
+                        overflow: hidden;
+                        border-radius:10px;
+                        }
+                        #maincontent .main .all .down .traval img{
+                        width:100%;
+                        height:100%;
+                        }
+                        #maincontent .main .all .down .traval img:hover{
+                        transition: all 1.5s;
+                        transform:scale(1.2);
+                        }
+                        #maincontent .main .all .down .traval .text{
+                        float:left;
+                        width:600px;
+                        height:150px;
+                        margin:10px 0px;
+                        }
+                        #maincontent .main .all .down .traval .text .title a{
+                        font: inherit;
+                        font-size:18px;
+                        color:black;
+                        }
+                        #maincontent .main .all .down .traval .text .title a:hover{
+                        color:#66cc99;
+                        }
+                        #maincontent .main .all .down .traval .text .author{
+                        font-family:Palatino;
+                        color:#6F6F6F;
+                        margin-top:10px;
+                        margin-bottom:10px;
+                        }
+                        #maincontent .main .all .down .traval .text .content a{
+                        font-family:Palatino;
+                        color:#B2B8AD;
+                        }
+
+                    </style>
+            </div>
+        </div>
+       </div>
+
+    </div>
+<!--    页面-->
+   <div class="page" style="width:100%;height:80px;">
+        <div style="width:1280px;height:100%;margin:auto;">
+            <div style="width:200px;height:80%;margin:auto;">
+                <div style="width:40px;height:30px;color:black;padding-left:5px;padding-top:10px;float:left;margin-top:20px;border:1px solid #eeeeee;">第1页</div>
+                <div style="width:40px;height:30px;color:black;padding-left:5px;padding-top:10px;float:left;margin-top:20px;border:1px solid #eeeeee;">共1页</div>
+            </div>
+        </div>
+    </div>
+   <script type="text/javascript" src="\static\JS\swiper.js"></script>
+   <script type="text/javascript">
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            loop: true,
+            autoplay: 3000,
+            speed: 1000,
+            prevButton: '.swiper-button-prev',
+            nextButton: '.swiper-button-next',
+            effect: 'fade',//  effect: 'flip',effect: 'coverflow',slide', 'fade',cube
+            grabCursor: true,
+            cube: {
+                shadow: false,
+                slideShadows: false,
+                shadowOffset: 20,
+                shadowScale: 0.94
+            }
+        });
+   </script>
+
+</body>
+</html>
+{% endblock %}

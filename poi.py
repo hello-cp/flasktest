@@ -8,7 +8,7 @@ class Poi:  # 景点详细信息
     address = ''  # 地址（路）
     rating = 1  # 评分
     photo = 'https://lbs.amap.com/api/webservice/guide/api/search'
-    time = 1.5  # 不管
+    time = 1  # 不管
 
 
 random_poi = dict()
@@ -40,35 +40,35 @@ all_poi['隋唐洛阳城国家遗址公园'].name = '隋唐洛阳城国家遗址
 all_poi['隋唐洛阳城国家遗址公园'].location = [112.455942, 34.680804]
 all_poi['隋唐洛阳城国家遗址公园'].rating = 4.4
 all_poi['隋唐洛阳城国家遗址公园'].photo = 'https://ts1.cn.mm.bing.net/th/id/R-C.22eb34d32c33620d3887d8193fd4804d?rik=RsjMyADgYm8WzQ&riu=http%3a%2f%2fdimg02.c-ctrip.com%2fimages%2ffd%2ftg%2fg1%2fM07%2f99%2fD6%2fCghzfFTF-eeAcngnAAFdov-eOF8051.jpg&ehk=8T3tRVN%2fMSU9wofLpJqHA3ThPKkne7i7HaZsh5fRzIs%3d&risl=&pid=ImgRaw&r=0'
-all_poi['隋唐洛阳城国家遗址公园'].time = 'static/templates/function.html'
+all_poi['隋唐洛阳城国家遗址公园'].time = 2
 
 all_poi['白云山'].address = '嵩县'
 all_poi['白云山'].name = '白云山'
 all_poi['白云山'].location = [111.841283, 33.683911]
 all_poi['白云山'].rating = 4.0
 all_poi['白云山'].photo = 'https://p1.ssl.qhimg.com/t015154bc5acec1e38f.jpg'
-all_poi['白云山'].time = 'static/templates/function.html'
+all_poi['白云山'].time = 2
 
 all_poi['王城公园'].address = '西工区中州中路312号'
 all_poi['王城公园'].name = '王城公园'
 all_poi['王城公园'].location = [112.421954, 34.666010]
 all_poi['王城公园'].rating = 4.8
 all_poi['王城公园'].photo = 'https://ts1.cn.mm.bing.net/th/id/R-C.20148610a0061cd33cef199120048871?rik=Igp%2b1HvaVOs8gw&riu=http%3a%2f%2fwww.cnzzzz.com%2fuploads%2fallimg%2f18%2f3-1PZ5091029209.jpg&ehk=mvMGLcaEHeFuhlGUF%2fUiEvpSS3Yu2TPvfuX0Yw%2buqxU%3d&risl=&pid=ImgRaw&r=0'
-all_poi['王城公园'].time = 'static/templates/function.html'
+all_poi['王城公园'].time = 2
 
 all_poi['洛阳鸡冠洞风景名胜区'].address = '栾川县城西3公里处'
 all_poi['洛阳鸡冠洞风景名胜区'].name = '洛阳鸡冠洞风景名胜区'  # 洛阳鸡冠洞风景名胜区
 all_poi['洛阳鸡冠洞风景名胜区'].location = [111.570571, 33.783207]
 all_poi['洛阳鸡冠洞风景名胜区'].rating = 4.8
 all_poi['洛阳鸡冠洞风景名胜区'].photo = 'https://tse1-mm.cn.bing.net/th/id/OIP-C.WJ39M6m0nwXt1lp4uL0dhQHaE8?pid=ImgDet&rs=1'
-all_poi['洛阳鸡冠洞风景名胜区'].time = 'static/templates/function.html'
+all_poi['洛阳鸡冠洞风景名胜区'].time = 1
 
 all_poi['重渡沟旅游度假区'].address = '栾川县潭头镇重渡村'
 all_poi['重渡沟旅游度假区'].name = '重渡沟旅游度假区'
 all_poi['重渡沟旅游度假区'].location = [111.733545, 33.947952]
 all_poi['重渡沟旅游度假区'].rating = 4.2
 all_poi['重渡沟旅游度假区'].photo = 'https://tse1-mm.cn.bing.net/th/id/OIP-C.ta4pbAkj3E7Vd-Hnum-5KAHaEw?pid=ImgDet&rs=1'
-all_poi['重渡沟旅游度假区'].time = 'static/templates/function.html'
+all_poi['重渡沟旅游度假区'].time = 2
 
 # all_poi['翠云峰森林公园'].name = '翠云峰森林公园'
 # all_poi['翠云峰森林公园'].location = [112.454228, 34.709402]
