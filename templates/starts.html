@@ -9,7 +9,8 @@
   <title>【{{a}}洛阳日程】—— 捷程日程规划</title>
 <link rel="shortcut icon" href="https://pic.imgdb.cn/item/642ad0faa682492fcc1f723e.jpg" type="image/x-icon">
     <link rel="stylesheet" href="//common2.qyerstatic.com/plan/desktop/preview/css/style.609f7575a138867d073ba4bc047f1e8f.css">
-  <script>
+<link rel="stylesheet" type="text/css" href="/static/css/hello.css">
+    <script>
     window.QYER = {
       uid: [0][0] || 0
     };
@@ -74,7 +75,7 @@
                   <ul style="flex-direction:column;">
                       <li><a href="/home" class="first" style="text-decoration:none;">首页</a></li>
                       <li><a href="/plan" style="text-decoration:none;">个性化规划</a></li>
-                      <li style="background:#66cc99;"><a href="/schedule2" style="color:white;text-decoration:none;">日程规划</a></li>
+                      <li style="background:#66cc99;"><a href="/schedule" style="color:white;text-decoration:none;">日程规划</a></li>
                       <li><a href="/blind" style="text-decoration:none;">旅游盲盒</a></li>
                       <li><a href="/poi" style="text-decoration:none;">景点一览</a></li>
                       <li><a href="/classic" style="text-decoration:none;">热门路线</a></li>
@@ -172,10 +173,10 @@
                                                                                                 <a  target="_blank" data-bn-ipg="planview-content-city">洛阳&nbsp;LuoYang</a>
                                                                     </h4>
                 <h5>
-                    <a href="{{order1[0]}}1.html"target="_blank" data-bn-ipg="planview-content-city">{{order1[0]}}</a>
+                    <a href="/static/templates/{{order1[0]}}1.html"target="_blank" data-bn-ipg="planview-content-city">{{order1[0]}}</a>
                      {% for i in range(1,l) %}
                     <em class="iconfont"></em>
-                       <a href="{{order1[i]}}1.html"target="_blank" data-bn-ipg="planview-content-city">{{order1[i]}}</a>
+                       <a href="/static/templates/{{order1[i]}}1.html"target="_blank" data-bn-ipg="planview-content-city">{{order1[i]}}</a>
 
 
                     {% endfor %}
@@ -187,9 +188,9 @@
 
           <article class="poi clearfix" style="" >
         <div class="dotted bottom"></div>
-            <a href="{{order1[0]}}1.html" target="_blank" data-bn-ipg="planview-content-poi-pic">
+            <a href="/static/templates/{{order1[0]}}1.html" target="_blank" data-bn-ipg="planview-content-poi-pic">
         <figure>
-                                                                                                            <img src="{{order1[0]}}1.html" onerror="this.src='{{tupian[0]}}'">
+                                                                                                            <img src="/static/templates/{{order1[0]}}1.html" onerror="this.src='{{tupian[0]}}'">
 
                       </figure>
       </a>
@@ -200,7 +201,7 @@
 
     <!-- 景点 -->
           <h5 class="ellipsis">
-                  <a title="{{order1[0]}}" href="{{order1[0]}}1.html" target="_blank" data-bn-ipg="planview-content-poi-title">{{order1[0]}}</a>
+                  <a title="{{order1[0]}}" href="/static/templates/{{order1[0]}}1.html" target="_blank" data-bn-ipg="planview-content-poi-title">{{order1[0]}}</a>
 
 
 
@@ -250,9 +251,9 @@
 </div>
      <article class="poi clearfix" style="" >
         <div class="dotted bottom"></div>
-            <a href="{{order1[i]}}1.html" target="_blank" data-bn-ipg="planview-content-poi-pic">
+            <a href="/static/templates/{{order1[i]}}1.html" target="_blank" data-bn-ipg="planview-content-poi-pic">
         <figure>
-                                                                                                            <img src="{{order1[i]}}1.html" onerror="this.src='{{tupian[i]}}'">
+                                                                                                            <img src="/static/templates/{{order1[i]}}1.html" onerror="this.src='{{tupian[i]}}'">
 
                       </figure>
       </a>
@@ -263,7 +264,7 @@
 
     <!-- 景点 -->
           <h5 class="ellipsis">
-                  <a title="{{order1[i]}}" href="{{order1[i]}}1.html" target="_blank" data-bn-ipg="planview-content-poi-title">{{order1[i]}}</a>
+                  <a title="{{order1[i]}}" href="/static/templates/{{order1[i]}}1.html" target="_blank" data-bn-ipg="planview-content-poi-title">{{order1[i]}}</a>
               </h5>
       <p>
                                     <em class="iconfont green"></em>
@@ -328,7 +329,7 @@
       <div class="map">
         <div id="map-container" class="container">
           <img src="//fes.qyerstatic.com/FoAOjLTT73vqaHK1jMfsiWmwWKJZ?imageslim">
-            <form action="/schedule" method='post' style="" data-bn-ipg="plan_preview_map" class="fullscreen">
+            <form action="/schedule2" method='post' style="" data-bn-ipg="plan_preview_map" class="fullscreen">
                 <button class="subBtnCss">
                     点击查看地图详情 >
                 </button>

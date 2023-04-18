@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>捷诚旅行-专属的个性化旅程</title>
+    <link rel="shortcut icon" href="https://pic.imgdb.cn/item/642ad0faa682492fcc1f723e.jpg" type="image/x-icon">
+	<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+    p {
+        text-align: center;
+        font-size: 35px;
+        font-family:Arial;
+        padding-top:5px;
+    }
+	.but{
+	display: none;
+	}
+	label{
+	margin:auto;
+	color:black;
+	t-size: 100px;
+	}
+	#but1:checked~#body1{background-color: #66cc99;}
+	#but2:checked~#body2{background-color: #66cc99;}
+	#but3:checked~#body3{background-color: #66cc99;}
+	#but4:checked~#body4{background-color: #66cc99;}
+	#but5:checked~#body5{background-color: #66cc99;}
+	#but6:checked~#body6{background-color: #66cc99;}
+	#but7:checked~#body7{background-color: #66cc99;}
+	#but8:checked~#body8{background-color: #66cc99;}
+
+	#body1{
+		float:left;
+		background-color: #eee;
+		filter: opacity(60%);
+		width: 150px;
+		height: 150px;
+		border-radius:75px;
+		margin:50px;
+		margin-left:100px;
+	}
+	#body2{
+		float:left;
+		background-color: #eee;
+		filter: opacity(60%);
+		width: 200px;
+		height: 200px;
+		border-radius:100px;
+		margin:50px;
+		margin-top:100px;
+	}
+	#body3{
+		float:left;
+		background-color: #eee;
+		filter: opacity(60%);
+		width: 140px;
+		height: 140px;
+		border-radius:70px;
+		margin:80px;
+	}
+	#body4{
+		float:left;
+		background-color: #eee;
+		filter: opacity(60%);
+		width: 220px;
+		height: 220px;
+		border-radius:110px;
+		margin-right:100px;
+	}
+	#body5{
+		float:right;
+		background-color: #eee;
+		filter: opacity(60%);
+		width: 180px;
+		height: 180px;
+		border-radius:90px;
+		margin:20px;
+		margin-right:50px;
+	}
+	#body6{
+		float:right;
+		background-color: #eee;
+		filter: opacity(60%);
+		width: 200px;
+		height: 200px;
+		border-radius:100px;
+		margin:10px;
+	}
+	#body7{
+		float:right;
+		background-color: #eee;
+		filter: opacity(60%);
+		width: 170px;
+		height: 170px;
+		border-radius:85px;
+		//margin:50px;
+		margin-top:-40px;
+		margin-right:90px;
+	}
+	#body8{
+		float:right;
+		background-color: #eee;
+		filter: opacity(60%);
+		width: 230px;
+		height: 230px;
+		border-radius:115px;
+		margin:10px;
+		margin-right:180px;
+		margin-top:-50px;
+	}
+	#body1:hover{background-color:#66cc99;}
+	#body2:hover{background-color:#66cc99;}
+	#body3:hover{background-color:#66cc99;}
+	#body4:hover{background-color:#66cc99;}
+	#body5:hover{background-color:#66cc99;}
+	#body6:hover{background-color:#66cc99;}
+	#body7:hover{background-color:#66cc99;}
+	#body8:hover{background-color:#66cc99;}
+	.main1{
+	width:100px;
+	height:50px;
+	margin-top:50px;
+	margin-left:40px;
+	font-size:25px;
+	}
+	.main2{
+	width:100px;
+	height:50px;
+	margin-top:80px;
+	margin-left:60px;
+	font-size:25px;
+	}
+	.main3{
+	width:100px;
+	height:50px;
+	margin-top:50px;
+	margin-left:40px;
+	font-size:25px;
+	}
+	.main4{
+	width:100px;
+	height:50px;
+	margin-top:90px;
+	margin-left:70px;
+	font-size:25px;
+	}
+	.main5{
+	width:100px;
+	height:50px;
+	margin-top:80px;
+	margin-left:60px;
+	font-size:25px;
+	}
+	.main6{
+	width:100px;
+	height:50px;
+	margin-top:90px;
+	margin-left:80px;
+	font-size:25px;
+	}
+	.main7{
+	width:100px;
+	height:50px;
+	margin-top:70px;
+	margin-left:50px;
+	font-size:25px;
+	}
+	.main8{
+	width:100px;
+	height:50px;
+	margin-top:90px;
+	margin-left:80px;
+	font-size:25px;
+	}
+	</style>
+</head>
+<body>
+	<div style="width:100%;height:600px;">
+		<div style="width:1280px;height:100%;margin:auto;background-image:url('https://img.zcool.cn/community/01ba4d5e295427a8012165188f8345.jpg@3000w_1l_0o_100sh.jpg');">
+			<div style="width:1280px;height:100%;margin:auto;">
+				<p>请选择您感兴趣的标签</p>
+				<form action="/" method="post">
+					<input type="checkbox" id="but1" class="but" name="美食" value="1">
+					<div id="body1" class="body"><label for="but1"><div class="main1">美食</div></label></div>
+					<input type="checkbox" id="but2" class="but" name="风景" value="2">
+					<div id="body2" class="body"><label for="but2"><div class="main2">风景</div></label></div>
+					<input type="checkbox" id="but3" class="but" name="名胜" value="3">
+					<div id="body3" class="body"><label for="but3"><div class="main3">名胜</div></label></div>
+					<input type="checkbox" id="but4" class="but" name="名山大川" value="4">
+					<div id="body4" class="body"><label for="but4"><div class="main4">名山大川</div></label></div>
+					<input type="checkbox" id="but5" class="but" name="国家公园" value="5">
+					<div id="body5" class="body"><label for="but5"><div class="main5">国家公园</div></label></div>
+					<input type="checkbox" id="but7" class="but" name="历史古韵" value="7">
+					<div id="body7" class="body"><label for="but7"><div class="main7">历史古韵</div></label></div>
+					<input type="checkbox" id="but8" class="but" name="博物馆" value="8">
+					<div id="body8" class="body"><label for="but8"><div class="main8">博物馆</div></label></div>
+					<button type="submit" id="submit-btn" style="float:left;margin-top:-50px;margin-left:600px;cursor:pointer;border-radius:8px;height: 52px;width: 100px;background-color:#66cc99;border-style: none;font-size:25px;">进入</button>
+				</form>
+			</div>
+
+		</div>
+	</div>
+
+</body>
+</html>
